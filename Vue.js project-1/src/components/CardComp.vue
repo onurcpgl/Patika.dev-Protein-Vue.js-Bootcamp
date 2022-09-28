@@ -1,16 +1,15 @@
 <script setup>
-import { ref, computed } from "vue";
 const props = defineProps(["result"]);
 
-const emits = defineEmits(["pageNumber"]);
+const emits = defineEmits(["setPageNumber"]);
 
-function pageNameFunction(value) {
-  emits("pageNumber", value);
+function pageNameFunction(number) {
+  emits("setPageNumber", number);
 }
 </script>
 
 <template>
-   <div class="flex flex-col items-center my-5">
+  <div class="flex flex-col items-center my-5">
     <div class="inline-flex mt-2 xs:mt-0">
       <!-- Previous Button -->
       <a
