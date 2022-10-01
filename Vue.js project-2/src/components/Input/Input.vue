@@ -3,7 +3,7 @@
 import { ref } from "vue";
 const emits = defineEmits(["filterChar"]);    
 const searchName = ref()
-
+console.log("change",searchName);
 function filterCharData(searchName) {
   emits("filterChar", searchName);
 }
@@ -11,7 +11,7 @@ function filterCharData(searchName) {
 </script>
 <template>
   <div class="grid grid-rows-12 container mx-auto px-10 py-5">
-    <form>
+    <form @submit.prevent>
       <label
         for="default-search"
         class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
@@ -41,6 +41,7 @@ function filterCharData(searchName) {
           
           type="search" 
           v-model.lazy="searchName"
+          @change="searchName"
           id="default-search"
           class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Search Mockups, Logos..."

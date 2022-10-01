@@ -21,7 +21,7 @@ async function filterCharacter(name) {
 
 <template>
  
-  Vue.js project-2
+
   <Input @filterChar="filterCharacter"></Input>
   <Card :character="data"></Card>
 </template>

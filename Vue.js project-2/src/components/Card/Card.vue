@@ -4,7 +4,7 @@ console.log("Card-props",props.character);
 </script>
 
 <template>
-  <div class="grid grid-cols-4 gap-4 container mx-auto px-10 py-5">
+  <div class="grid grid-cols-4 gap-5 container mx-auto px-10 py-5">
     <div v-for="char in props.character">
       <a
         href="#"
