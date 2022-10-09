@@ -1,17 +1,9 @@
 <script setup>
 import ListGif from "./components/list/ListGif.vue";
-
-
-
 </script>
 
 <template>
-
-
-<ListGif></ListGif>
-
+  <ListGif></ListGif>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
